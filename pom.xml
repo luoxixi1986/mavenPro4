@@ -1,0 +1,144 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.tedu</groupId>
+  <artifactId>MavenPro1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>MavenPro1</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+   
+   <dependency>
+   <!--安装的jar包-->
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.7</version>
+      <scope>test</scope>
+   </dependency>
+   
+   <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>2.44.0</version>
+   </dependency>   
+   
+   <dependency>
+     <groupId>org.testng</groupId>
+     <artifactId>testng</artifactId>
+     <version>6.8.7</version>
+   </dependency>
+   <!-- 支持高版本excel后缀为xlsx -->
+   <dependency>
+     <groupId>org.apache.poi</groupId>
+     <artifactId>poi-ooxml</artifactId>
+     <version>3.9</version>
+     <!--执行测试用例的时候把xml-apis跳过-->
+     <exclusions>
+     	<exclusion>
+     		<artifactId>xml-apis</artifactId>
+     		<groupId>xml-apis</groupId>
+     	</exclusion>
+     </exclusions>
+   </dependency> 
+   <!-- 支持低版本excel后缀为xls -->
+   <dependency>
+     <groupId>org.apache.poi</groupId>
+     <artifactId>poi</artifactId>
+     <version>3.9</version>
+     <!--执行测试用例的时候把xml-apis跳过-->
+     <exclusions>
+     	<exclusion>
+     		<artifactId>xml-apis</artifactId>
+     		<groupId>xml-apis</groupId>
+     	</exclusion>
+     </exclusions>
+   </dependency> 
+   
+   <dependency>
+		<groupId>net.sf.opencsv</groupId>
+		<artifactId>opencsv</artifactId>
+		<version>2.3</version>
+   </dependency>
+   
+   <!--reportng testNG报告美化插件-->
+   <dependency>
+	 <groupId>org.uncommons</groupId>
+	 <artifactId>reportng</artifactId>
+	 <version>1.1.4</version>
+	 <exclusions>
+	     <exclusion>
+		     <groupId>org.testng</groupId>
+		     <artifactId>testng</artifactId>
+	     </exclusion>
+	</exclusions>
+  </dependency>
+    
+  <!--reportng依赖包-->
+  <dependency>
+	<groupId>velocity</groupId>
+	<artifactId>velocity-dep</artifactId>
+	<version>1.4</version>
+  </dependency>
+  
+ <!--reportng依赖包-->
+ <dependency>
+   <groupId>com.google.inject</groupId>
+   <artifactId>guice</artifactId>
+   <version>4.0</version>
+ </dependency>
+ 
+
+  
+   
+   <!--查看日志信息级别-->
+   <dependency>
+     <groupId>log4j</groupId>
+     <artifactId>log4j</artifactId>
+     <version>1.2.17</version>
+   </dependency> 
+      
+ </dependencies>
+ 
+ <build>
+  <!--安装的插件-->
+  <plugins>
+	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-compiler-plugin</artifactId>
+  		<version>3.1</version>
+  		<configuration>
+			<fork>true</fork>
+			<source>1.8</source>
+			<target>1.8</target>	
+		</configuration> 		
+	</plugin>
+	
+    <!--添加插件 关联testNg.xml-->
+	<plugin>
+	    <groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-surefire-plugin</artifactId>
+		<version>2.16</version>
+		<configuration>
+		   <!--<suiteXmlFiles>
+				<suiteXmlFile>src/test/java/org/tedu/MavenPro1/testng.xml</suiteXmlFile>
+			</suiteXmlFiles>-->
+			 <!--<suiteXmlFiles>
+				<suiteXmlFile>src/test/java/ecshop/testng.xml</suiteXmlFile>
+			</suiteXmlFiles>-->
+			<suiteXmlFiles>
+				<suiteXmlFile>src/test/java/ecshop2/testng.xml</suiteXmlFile>
+			</suiteXmlFiles>
+		</configuration>
+	</plugin>
+	
+  </plugins>
+</build>
+</project>

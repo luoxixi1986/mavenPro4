@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+  <listeners>
+	<listener class-name="org.uncommons.reportng.HTMLReporter" />
+	<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+  </listeners>
+  <!--<test name="Test">
+    <classes>
+      <class name="tedu.TestLog4j"/>
+    </classes>
+  </test> -->
+  <!--<test name="Test2">
+   <classes>
+     <class name="tedu.TestScreenShotID"/>
+   </classes>
+  </test> -->
+ <test name="Test3">
+   <classes>
+     <class name="tedu.TestAlert"/>
+   </classes>
+ </test> 
+  
+</suite>
