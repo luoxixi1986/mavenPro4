@@ -6,7 +6,7 @@ public class Constants {
 	public static final String IE_DRIVER = System.getProperty("user.dir")+"\\driver\\IEDriverServer.exe";
 	//Chrome驱动文件
 	public static final String CHROME_DRIVER = System.getProperty("user.dir")+"\\driver\\chromedriver.exe";
-	//隐式等待默认超时时间,long长整型
+	//隐式等待默认超时时间,long长整型         
 	//常量定义名称
 	public static final long WAIT_TIME=60;
 	//显示等待的超时时间
@@ -22,5 +22,10 @@ public class Constants {
 	//ECSHOP高级搜索网址
 	public static final String ECSHOP_ADVANCED_SEARCH_URL="http://localhost//ecshop/upload/search.php?encode=YToyOntzOjM6ImFjdCI7czoxNToiYWR2YW5jZWRfc2VhcmNoIjtzOjE4OiJzZWFyY2hfZW5jb2RlX3RpbWUiO2k6MTUzOTYwNzgzNTt9";
 
-
 }
+
+                  
+
+
+
+
