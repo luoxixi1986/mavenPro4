@@ -134,7 +134,7 @@
 				<suiteXmlFile>src/test/java/ecshop/testng.xml</suiteXmlFile>
 			</suiteXmlFiles>-->
 			<suiteXmlFiles>
-				<suiteXmlFile>src/test/java/ecshop2/testng.xml</suiteXmlFile>
+				<suiteXmlFile>src/test/java/day03/testng.xml</suiteXmlFile>
 			</suiteXmlFiles>
 		</configuration>
 	</plugin>
