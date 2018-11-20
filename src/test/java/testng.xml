@@ -2,7 +2,7 @@
 <suite name="Suite" parallel="false">
   <test name="Test">
     <classes>
-      <class name="day03.Test3"/>
+      <class name="day03.TestEcshopSearch"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
