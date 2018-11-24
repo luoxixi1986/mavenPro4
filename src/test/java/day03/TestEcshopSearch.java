@@ -23,8 +23,8 @@ public class TestEcshopSearch {
 	  }catch (InterruptedException e){
 	  	e.printStackTrace();
 	  }
-	  //String c = driver.findElement(By.xpath(".//*[@id='pager']/span/b")).getText();
-	  String c = driver.findElement(By.xpath(".//*[@id='pager']/spanS/bB")).getText();
+	  String c = driver.findElement(By.xpath(".//*[@id='pager']/span/b")).getText();
+	  //String c = driver.findElement(By.xpath(".//*[@id='pager']/spanS/bB")).getText();
 	  assertEquals(c,"3");
 	  driver.findElement(By.id("keyword")).clear();
 	  driver.findElement(By.id("keyword")).sendKeys("移动话费");
